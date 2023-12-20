@@ -1,6 +1,6 @@
 Name:		texlive-quran-ur
-Version:	57597
-Release:	2
+Version:	68314
+Release:	1
 Summary:	Urdu translations to the quran package
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/quran-ur
