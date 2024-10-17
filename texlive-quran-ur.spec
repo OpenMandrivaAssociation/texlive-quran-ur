@@ -3,7 +3,7 @@ Version:	68314
 Release:	1
 Summary:	Urdu translations to the quran package
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/quran-ur
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/quran-ur
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.doc.r%{version}.tar.xz
