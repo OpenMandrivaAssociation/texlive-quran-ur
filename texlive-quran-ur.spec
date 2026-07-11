@@ -1,37 +1,21 @@
-Name:		texlive-quran-ur
-Version:	68314
-Release:	1
+%global tl_name quran-ur
+%global tl_revision 74829
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.23
+Release:	%{tl_revision}.1
 Summary:	Urdu translations to the quran package
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/quran-ur
+URL:		https://www.ctan.org/tex-archive/macros/unicodetex/latex/quran-ur
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/quran-ur.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package is prepared for typesetting some Urdu translations
-of the Holy Quran. It adds eight Urdu translations to the quran
-package.
+The package is prepared for typesetting some Urdu translations of the
+Holy Quran. It adds eight Urdu translations to the quran package.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/quran-ur
-%doc %{_texmfdistdir}/doc/latex/quran-ur
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
